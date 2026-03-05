@@ -162,7 +162,7 @@ The README notes that state is memory-only, that the bot is demo/educational, an
 
 # 🔒 Security
 ---
-Security is handled by sec_1.py via the SecurityManager class and two decorators applied to all poll commands:
+Security is handled by ```sec_1.py``` via the SecurityManager class and two decorators applied to all poll commands:
 - @require_security_check —> Checks if the user is blocked and enforces rate limits
 Blocked users are stored in memory only. When the bot is restarted, it resets the blocked users
 - @validate_poll_input —> Sanitizes and validates all user input before processing
@@ -214,4 +214,5 @@ Central ```on_error``` logging, and handling ```discord.errors.Forbidden``` arou
 
 
 - Memory-only state is fine for demos but not production. 
+
 Storing blocked users, rate-limit data, and stats in memory keeps the example compact, but it means all state is lost on restart — a persistent DB is required for real deployments. The README warns about these limitations.
