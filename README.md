@@ -1,9 +1,9 @@
 # 🔒 Discord Poll Bot
----
+
 A Discord bot for creating polls with security features including rate limiting, spam detection, input sanitization, and admin controls. It allows users to create custom polls and quick yes/no polls while protecting against abuse and malicious inputs. It is solely created using python programming language.
 
 # ⚠️DISCLAIMER
----
+
 This Discord Poll Bot was created for educational and project purposes only. It is intended to demonstrate secure coding practices, including rate limiting, input sanitization, spam detection, and basic access control.
 
 This bot is **NOT** designed to be **LIVE PUBLIC/PRODUCTION-GRADE PROGRAM**.
@@ -23,7 +23,7 @@ If you deploy this bot in a public or production environment, you are responsibl
 The author is not responsible for any misuse, abuse, or damages resulting from deployment of this software.
 
 ## 📌 Features of Discord Poll Bot
----
+
 The following are the features of the poll bot.
 
 #### 🗳️ Poll Features
@@ -56,7 +56,7 @@ The following are the features of the poll bot.
 
 
 # ⚙️ Requirements
----
+
 - Python 3.9+
 - Discord Bot Token
 - Discord User ID (For assigning Super Admin)
@@ -64,7 +64,7 @@ The following are the features of the poll bot.
 
 
 # 🐍 Python Libraries Used
----
+
 External libraries:
 - discord.py
 - python-dotenv
@@ -95,7 +95,7 @@ SUPER_ADMIN_ID=your_user_id_here
 
 
 # Processes Involved
----
+
 
 #### Two-file Structure
 - ```sec_1.py```
@@ -140,7 +140,7 @@ The README notes that state is memory-only, that the bot is demo/educational, an
 
 
 # 🤖 Commands
----
+
 #### • Poll Commands
 | Commands | Description |
 |:-----------:|:------------:|
@@ -161,7 +161,7 @@ The README notes that state is memory-only, that the bot is demo/educational, an
 
 
 # 🔒 Security
----
+
 Security is handled by ```sec_1.py``` via the SecurityManager class and two decorators applied to all poll commands:
 - @require_security_check —> Checks if the user is blocked and enforces rate limits
 Blocked users are stored in memory only. When the bot is restarted, it resets the blocked users
@@ -175,7 +175,7 @@ Input sanitization removes:
 
 
 # 🛠 Configuration
----
+
 | Settings | Default | Description |
 |:-----------:|:------------:|:------------:|
 | MAX_QUESTION_LENGTH| unlimited         | Max characters for poll question|
@@ -187,7 +187,7 @@ Input sanitization removes:
 
 
 # 📋 Permissions
----
+
 The bot requires the following Discord permissions:
 - Send Messages
 - Embed Links
@@ -196,7 +196,7 @@ The bot requires the following Discord permissions:
  
 
 # Learnings from creating this project
----
+
 - Security-first design matters.
 Building the bot around a dedicated SecurityManager made it easy to centralize rate limits, spam detection, blocking, and input sanitization instead of scattering checks across commands — this reduces duplication and makes future audits simpler.
 
@@ -216,3 +216,4 @@ Central ```on_error``` logging, and handling ```discord.errors.Forbidden``` arou
 - Memory-only state is fine for demos but not production. 
 
 Storing blocked users, rate-limit data, and stats in memory keeps the example compact, but it means all state is lost on restart — a persistent DB is required for real deployments. The README warns about these limitations.
+
