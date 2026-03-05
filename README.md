@@ -80,7 +80,7 @@ Standard library modules:
 - secrets
 
 
-## Setup
+#### Setup
 - Install all the above python library modules above, using ```pip install <python module name>```. For example, ```pip install discord.py```
 
 
@@ -216,4 +216,5 @@ Central ```on_error``` logging, and handling ```discord.errors.Forbidden``` arou
 - Memory-only state is fine for demos but not production. 
 
 Storing blocked users, rate-limit data, and stats in memory keeps the example compact, but it means all state is lost on restart — a persistent DB is required for real deployments. The README warns about these limitations.
+
 
