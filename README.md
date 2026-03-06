@@ -63,7 +63,7 @@ The following are the features of the poll bot.
 - Discord Developer Account
 
 
-# 🐍 Python Libraries Used
+### 🐍 Python Libraries Used
 
 External libraries:
 - discord.py
@@ -216,5 +216,6 @@ Central ```on_error``` logging, and handling ```discord.errors.Forbidden``` arou
 - Memory-only state is fine for demos but not production. 
 
 Storing blocked users, rate-limit data, and stats in memory keeps the example compact, but it means all state is lost on restart — a persistent DB is required for real deployments. The README warns about these limitations.
+
 
 
